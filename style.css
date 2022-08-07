@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff: 'Roboto', sans-serif;
+  --fc: hsla(240, 6%, 21%, 1);
+  --bg-dark: hsla(240, 5%, 7%, 1);
+  --button-dm: hsla(240, 7%, 78%, 1);
+  --bg: hsla(0, 0%, 100%, 1);
+  --bg-2: hsla(194, 97%, 31%, 0.1);
+  --card: hsla(240, 9%, 89%, 1);
+  --card-dark: hsla(240, 6%, 17%, 1);
+  --card-select: hsla(194, 97%, 31%, 1);
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font: 12.6rem/14.7rem var(--ff);
+}
+
+body.dark {
+  background: var(--bg-dark);
+}
+
+.light-mode,
+.dark-mode {
+  position: absolute;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+.dark-mode path {
+  fill: var(--bg);
+}
+
+div.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--bg-2);
+
+  border-radius: 4rem;
+  padding: 2.4rem;
+  width: min(87.1rem, 64%);
+}
+
+.timer {
+  display: grid;
+}
+
+span {
+  display:  table-cell;
+}
+
+span.dark {
+  color: var(--bg);
+}
+
+.controller {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+svg {
+  width: 4.8rem;
+  height: 4.8rem;
+  cursor: pointer;
+}
+
+svg path {
+  fill: var(--fc);
+}
+
+.container svg.dark path {
+  fill: var(--button-dm);
+}
+
+svg:active > path {
+  fill: var(--card-select);
+}
+
+.hide {
+  display: none;
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+} 
+
+.card {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+
+  background: var(--card);
+  cursor: pointer;
+}
+
+.card.dark {
+  background: var(--card-dark);
+}
+
+.card.on {
+  background: var(--card-select);
+}
+
+.card svg {
+  
+}
+
+.card svg.on path {
+  fill: var(--bg);
+}
+
+.wrapper {
+  max-height: 15.2rem;
+}
+
+/* INPUT RANGE ============= */
+
+input[type=range] {
+  height: 1.6rem;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: .4rem;
+  cursor: pointer;
+  background: var(--fc);
+  border-radius: .4rem;
+}
+
+input.on[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: .4rem;
+  cursor: pointer;
+  background: var(--bg);
+  border-radius: .4rem;
+}
+
+input.dark[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: .4rem;
+  cursor: pointer;
+  background: var(--bg);
+  border-radius: .4rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--fc);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.6rem;
+}
+
+input.on[type=range]::-webkit-slider-thumb {
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--bg);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.6rem;
+}
+
+input.dark[type=range]::-webkit-slider-thumb {
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--bg);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.6rem;
+}
+
+
+input.dark[type=range]::-webkit-slider-thumb {
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--bg);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.6rem;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--bg);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: .4rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: var(--fc);
+  border-radius: .4rem;
+  border: none;
+}
+
+input.dark[type=range]::-moz-range-track {
+  width: 100%;
+  height: .4rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: var(--bg);
+  border-radius: .4rem;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: none;
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--bg);
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: .4rem;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: var(--bg);
+  border: none;
+  border-radius: .8rem;
+  box-shadow: none;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: var(--bg);
+  border: none;
+  border-radius: .8rem;
+  box-shadow: none;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: .1rem;
+  box-shadow: none;
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--bg);
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: var(--bg);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: var(--bg);
+}
+
+.wrapper input {
+  width: 9rem;
+  position: relative;
+  left: calc(50% - 4.5rem);
+  bottom: 14rem;
+
+  height: .4rem;
+
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+
+  body {
+    font-size: clamp(9.6rem, 9.6rem + 15vw, 12.6rem);
+    text-align: center;
+  }
+
+  div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  
+    background: var(--bg-2);
+  
+    border-radius: 4rem;
+    padding: 2.4rem;
+    width: min(36.7rem, 90%);
+  }
+
+  .time {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .controller {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .wrapper input {
+    width: 9rem;
+    position: relative;
+    left: 0;
+    bottom: 14rem;
+  }
+
+}
+
+@media (max-width: 410px) {
+  
+  body {
+    margin-inline: auto;
+    font-size: 9rem
+  }
+  
+  div.container {
+    width: 100vw;
+    background: none;
+  }
+
+  div.timer {
+    margin-inline: auto;
+  }
+
+  .controller {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .sounds {
+    width: 90%;
+    gap: 1.6rem;
+    margin-inline: auto;
+  } 
+
+  .card {
+    width: 11.04rem;
+    height: 12.16rem;
+    border-radius: 2rem;
+  }
+
+}
