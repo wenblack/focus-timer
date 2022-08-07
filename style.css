@@ -48,7 +48,6 @@ div.container {
   align-items: center;
   justify-content: space-between;
 
-  background: var(--bg-2);
 
   border-radius: 4rem;
   padding: 2.4rem;
@@ -129,9 +128,7 @@ svg:active > path {
   background: var(--card-select);
 }
 
-.card svg {
-  
-}
+
 
 .card svg.on path {
   fill: var(--bg);
@@ -323,7 +320,7 @@ input[type=range]:focus::-ms-fill-upper {
     align-items: center;
     gap: 3.2rem;
   
-    background: var(--bg-2);
+    
   
     border-radius: 4rem;
     padding: 2.4rem;

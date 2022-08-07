@@ -12,10 +12,10 @@ import {
 export default function () {
     const buttonPressAudio =new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
     const kitchenTimer =new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
-    const forestAudio =new Audio("./sounds/Floresta.wav")
-    const rainAudio =new Audio("./sounds/Chuva.wav")
-    const voicesAudio =new Audio("./sounds/Cafeteria.wav")
-    const flameAudio =new Audio("./sounds/Lareira.wav")
+    const forestAudio =new Audio("./sounds/forest.wav")
+    const rainAudio =new Audio("./sounds/rain.wav")
+    const voicesAudio =new Audio("./sounds/coffee.wav")
+    const flameAudio =new Audio("./sounds/flame.wav")
     
     forestAudio.loop = true
     rainAudio.loop = true
@@ -77,40 +77,40 @@ export default function () {
     function forestOnOff() {
         if (buttonForest.classList.contains("on")) {
             forestAudio.play()
-            volForest.value = 0.5
+            volForest.value = 1
         } else {
             forestAudio.pause()
-            volForest.value = 0
+            volForest.value = 1
         }
     }
 
     function rainOnOff() {
         if (buttonRain.classList.contains("on")) {
             rainAudio.play()
-            volRain.value = 0.5
+            volRain.value = 1
         } else {
             rainAudio.pause()
-            volRain.value = 0
+            volRain.value = 1
         }
     }    
 
     function voicesOnOff() {
         if (buttonVoices.classList.contains("on")) {
             voicesAudio.play()
-            volVoices.value = 0.5
+            volVoices.value = 1
         } else {
             voicesAudio.pause()
-            volVoices.value = 0
+            volVoices.value = 1
         }
     }
     
     function flameOnOff() {
         if (buttonFlame.classList.contains("on")) {
             flameAudio.play()
-            volFlame.value = 0.5
+            volFlame.value = 1
         } else {
             flameAudio.pause()
-            volFlame.value = 0
+            volFlame.value = 1
         }
     }  
 

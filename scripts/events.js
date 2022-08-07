@@ -16,9 +16,9 @@ import {
     volFlame 
 } from "./elements.js"
 
-export default function ({ controler, timer, sounds }) {
+export default function ({ controller, timer, sounds }) {
     buttonForest.addEventListener('click', () => {
-        controler.playPauseForest()
+        controller.playPauseForest()
         sounds.forestOnOff()
         sounds.rainOnOff()
         sounds.voicesOnOff()
@@ -26,7 +26,7 @@ export default function ({ controler, timer, sounds }) {
     })
 
     buttonRain.addEventListener('click', () => {
-        controler.playPauseRain()
+        controller.playPauseRain()
         sounds.forestOnOff()
         sounds.rainOnOff()
         sounds.voicesOnOff()
@@ -34,7 +34,7 @@ export default function ({ controler, timer, sounds }) {
     })
 
     buttonVoices.addEventListener('click', () => {
-        controler.playPauseVoices()
+        controller.playPauseVoices()
         sounds.forestOnOff()
         sounds.rainOnOff()
         sounds.voicesOnOff()
@@ -42,7 +42,7 @@ export default function ({ controler, timer, sounds }) {
     })
     
     buttonFlame.addEventListener('click', () => {
-        controler.playPauseFlame()
+        controller.playPauseFlame()
         sounds.forestOnOff()
         sounds.rainOnOff()
         sounds.voicesOnOff()
@@ -52,23 +52,23 @@ export default function ({ controler, timer, sounds }) {
     buttonPlay.addEventListener('click', () => {
         sounds.pressButton()
         timer.countdown()
-        controler.play()
+        controller.play()
     })
 
     buttonPause.addEventListener('click', () => {
         sounds.pressButton()
-        controler.play()
+        controller.play()
         timer.hold()
     })
     
     buttonStop.addEventListener('click', () => {
         sounds.pressButton()
         timer.reset()
-        controler.stop()
+        controller.stop()
     })
 
     buttonPlus.addEventListener('click', () => {
-        let newMinutes = controler.plusMinutes()
+        let newMinutes = controller.plusMinutes()
         timer.updateDisplay(newMinutes, 0)
         timer.updateMinutes(newMinutes)
         sounds.pressButton()
@@ -76,7 +76,7 @@ export default function ({ controler, timer, sounds }) {
     })
 
     buttonLess.addEventListener('click', () => {
-        let newMinutes = controler.lessMinutes()
+        let newMinutes = controller.lessMinutes()
         timer.updateDisplay(newMinutes, 0)
         timer.updateMinutes(newMinutes)
         sounds.pressButton()
@@ -84,31 +84,31 @@ export default function ({ controler, timer, sounds }) {
     })
 
     buttonLight.addEventListener("click", () => {
-        controler.darkMode()
+        controller.darkMode()
     })
     
     buttonDark.addEventListener("click", () => {
-        controler.lightMode()
+        controller.lightMode()
     })
 
     volForest.addEventListener("change", () => {
         sounds.rangeForest()
-        controler.rangeForest()
+        controller.rangeForest()
     })
     
     volRain.addEventListener("change", () => {
         sounds.rangeRain()
-        controler.rangeRain()
+        controller.rangeRain()
     })
     
     volVoices.addEventListener("change", () => {
         sounds.rangeVoices()
-        controler.rangeVoices()
+        controller.rangeVoices()
     })
     
     volFlame.addEventListener("change", () => {
         sounds.rangeFlame()
-        controler.rangeFlame()
+        controller.rangeFlame()
     })
 
 }
